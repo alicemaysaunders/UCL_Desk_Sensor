@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<title>UCL Seats</title>
+	</head>
+
+	<body>
+
+		<h1>Let's find you a seat!</h1>
+		<ul>
+			{% for library in librarys %} 
+				<li> <a href="/library/{{ library.id }}">{{ library.name}}</a></li>
+			{% endfor %}
+		</ul>
+
+
+	</body>
+
+</html>
