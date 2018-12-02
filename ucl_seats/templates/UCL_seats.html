@@ -11,7 +11,9 @@
 		<h1>Let's find you a seat!</h1>
 		<ul>
 			{% for library in librarys %} 
-				<li> <a href="/library/{{ library.id }}">{{ library.name}}</a></li>
+				{% for map in library.maps %}
+					<li><a href="/library/{{ library.id }}/{{ map.id }}">{{ library.name }} - {{ map.name }}</a></li>
+				{% endfor %} 
 			{% endfor %}
 		</ul>
 
