@@ -1,7 +1,13 @@
-<!doctype html>
-
-<html> 
+<!DOCTYPE>
+<html>
+<head>
+  <title>Display Image</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
+</head>
 <body>
-{{ map_image | safe }}
+  <div class="map">
+    <img alt="HI" src="data:image/svg+xml;base64,{{map_image}}" ><svg viewbox="100 100 300 300"></svg></img>
+      <!--{{mapcode | safe}} -->
+</div>
 </body>
-</html> 
+</html>

@@ -4,18 +4,32 @@
 
 	<head>
 		<title>UCL Seats</title>
+		<link rel="stylesheet" type="text/css" href="templates/UCL_seats.css">
 	</head>
 
 	<body>
 
 		<h1>Let's find you a seat!</h1>
+		<div class="dropdown">
+		  <button class="dropbtn">Dropdown</button>
+		  <div class="dropdown-content">
+
+					{% for library in librarys %}
+						{% for map in library.maps %}
+							<a href="/library/{{ library.id }}/{{ map.id }}">{{ library.name }} - {{ map.name }}</a></li>
+						{% endfor %}
+					{% endfor %}
+
+		  </div>
+		</div>
+		<!--<h1>Let's find you a seat!</h1>
 		<ul>
-			{% for library in librarys %} 
+			{% for library in librarys %}
 				{% for map in library.maps %}
 					<li><a href="/library/{{ library.id }}/{{ map.id }}">{{ library.name }} - {{ map.name }}</a></li>
-				{% endfor %} 
+				{% endfor %}
 			{% endfor %}
-		</ul>
+		</ul> -->
 
 
 	</body>
