@@ -4,22 +4,20 @@
 
 	<head>
 		<title>UCL Seats</title>
-<<<<<<< HEAD
-		<link rel="stylesheet" type="text/css" href="templates/UCL_seats.css">
-=======
-		
+
+
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
->>>>>>> origin/master
+
 	</head>
 
 	<body>
 
 		<h1>Let's find you a seat!</h1>
-<<<<<<< HEAD
-		<div class="dropdown">
+
+	<!--	<div class="dropdown">
 		  <button class="dropbtn">Dropdown</button>
 		  <div class="dropdown-content">
 
@@ -39,18 +37,17 @@
 				{% endfor %}
 			{% endfor %}
 		</ul> -->
-=======
->>>>>>> origin/master
+
 
 		<div class="dropdown">
  			<button class="btn btn-secondary dropdown-toggle" type="largebutton" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     			Pick a library
   			</button>
   			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  				{% for library in librarys %} 
+  				{% for library in librarys %}
 				{% for map in library.maps %}
     				<a href="/library/{{ library.id }}/{{ map.id }}" class="dropdown-item">{{ library.name }} - {{ map.name }}</a>
-    			{% endfor %} 
+    			{% endfor %}
 				{% endfor %}
     		</div>
     	</div>

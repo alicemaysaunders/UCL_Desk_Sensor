@@ -21,14 +21,16 @@ def library_page(library_id,map_id): #pass these arguments through the function 
 	  "token": "uclapi-738dd8c9e77498a-39aefce60ca1db6-50fe1ceb32dc5d4-c03b8b4218e13a8",
 	  "survey_id": library_id,
 	  "map_id": map_id,
-      "image_scale": 0.015
+      "image_scale": 1
 	}
+
 
 	map_image_response = requests.get("https://uclapi.com/workspaces/images/map/live", params=map_image_params) #requests documentation
 
 
-	map_image_text = map_image_response.text
-	map_image = map_image_text.encode('base64')
+	map_image = map_image_response.text
+
+	#map_image = map_image_text.encode('base64')
 	return render_template("mapimage.html", map_image= map_image)
 
 

@@ -1,22 +1,19 @@
-<<<<<<< HEAD
+
 <!DOCTYPE>
+
+
 <html>
-<head>
-  <title>Display Image</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
-=======
-<!doctype html>
-
-<html> 
 
 <head>
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
->>>>>>> origin/master
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
 </head>
 <body>
-  <div class="map">
-    <img alt="HI" src="data:image/svg+xml;base64,{{map_image}}" ><svg viewbox="100 100 300 300"></svg></img>
-      <!--{{mapcode | safe}} -->
+  <div class="map"> <img>
+    <svg viewbox="0 0 100 100">
+      {{map_image | safe}}
+    </svg>
+  </img>
 </div>
 </body>
 </html>
